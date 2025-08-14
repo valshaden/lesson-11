@@ -1,14 +1,9 @@
-import my_module
+import tkinter as tk
 
-print("Hello World")
-
-#exit(100)
-
-x = my_module.summa(10, 20)
-print(x)
-print(my_module.pi)
-
-print(__name__)
 if __name__ == "__main__":
-    print(1, "Hello from main")
+    root = tk.Tk()
+    root.title("Изучение элементов GUI")
+    root.geometry("600x400+700+300")
+    
+    root.mainloop()    
     
