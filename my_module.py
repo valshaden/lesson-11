@@ -8,4 +8,8 @@ def summa(a:int, b:int) -> int:
 
 print("Привет из модуля")
 
-#exit(200)
+print(__name__)
+if __name__ == "__main__":
+    print(2, "Самостоятельный запуск")
+else :
+    print(2, "Импорт модуля")
