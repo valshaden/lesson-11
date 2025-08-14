@@ -1,15 +1,16 @@
-pi = 3.14
+import tkinter as tk
 
-def summa(a:int, b:int) -> int:
-    '''
-    This function takes two numbers as input and returns their sum.
-    '''
-    return a + b
+def study_entry():
+    window = tk.Toplevel()
+    window.title("Поля ввода")
+    window.geometry("300x200")
+    
+    
 
-print("Привет из модуля")
 
-print(__name__)
-if __name__ == "__main__":
-    print(2, "Самостоятельный запуск")
-else :
-    print(2, "Импорт модуля")
+#def button_click():
+#№    print("Кнопка нажата!")print(__name__)
+#№if __name__ == "__main__":
+#№    print(2, "Самостоятельный запуск")
+#№else :
+#№    print(2, "Импорт модуля")
