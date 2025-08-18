@@ -21,4 +21,13 @@ for r in range(4):
         #    canvas.create_rectangle(c*50, r*30, c*50+45, r*30+25, fill="green")
         #canvas.create_rectangle(c*50, r*30, c*50+45, r*30+25, fill="blue")
 
+def move_paddle(event):
+    pos = canvas.coords(paddle)
+    if event.keysym == 'Left' and pos[0] > 0:
+        canvas.move(paddle, -20, 0)
+    elif event.keysym == 'Right' and pos[2] < 400:
+        canvas.move(paddle, 20, 0)
+
+root.bind('<Key>', move_paddle)
+
 root.mainloop()
