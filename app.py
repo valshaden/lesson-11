@@ -2,6 +2,8 @@ import tkinter as tk
 from my_module import study_entry
 from study_radiobutton import study_radio
 from study_checkbox import study_checkbox
+from key_logger import keylogger
+
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -19,5 +21,8 @@ if __name__ == "__main__":
     tk.Button(root, 
               text="Изучение флажков", 
               command=study_checkbox).pack(pady=20)
+    tk.Button(root, 
+              text="Захват кнопок", 
+              command=keylogger).pack(pady=20)
         
     root.mainloop()
