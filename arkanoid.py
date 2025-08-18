@@ -2,9 +2,23 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("Арканоид")
-canvas = tk.Canvas(root, width=600, height=400, bg="black")
+canvas = tk.Canvas(root, width=400, height=300, bg="black")
 canvas.pack()
 
-paddle = canvas.create_rectangle(250, 350, 350, 370, fill="white")
+paddle = canvas.create_rectangle(150, 280, 250, 290, fill="white")
+ball = canvas.create_oval(190, 200, 210, 220, fill="red")
+
+c=0
+r=0
+blocks = []
+
+for r in range(4):
+    for c in range(10):
+        blocks.append(canvas.create_rectangle(c*50, r*30, c*50+45, r*30+25, fill="blue"))
+        #if r == 0 or r == 1:
+        #    canvas.create_rectangle(c*50, r*30, c*50+45, r*30+25, fill="red")
+        #elif r == 2 or r == 3:
+        #    canvas.create_rectangle(c*50, r*30, c*50+45, r*30+25, fill="green")
+        #canvas.create_rectangle(c*50, r*30, c*50+45, r*30+25, fill="blue")
 
 root.mainloop()
