@@ -1,6 +1,8 @@
 import logging
 import colorlog
 
+#logging.basicConfig(level=logging.DEBUG)
+
 # Настройка цветного логирования
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter(
@@ -9,7 +11,7 @@ handler.setFormatter(colorlog.ColoredFormatter(
 
 logger = colorlog.getLogger('example')
 logger.addHandler(handler)
-logger.setLevel(logging.ERROR)
+logger.setLevel(logging.DEBUG)
 logger.propagate = False  # Отключаем передачу в родительский логгер
 
 
@@ -18,6 +20,7 @@ logger.debug("Подробная информация для отладки")   
 logger.info("Общая информация о работе")              # БЕЛЫЙ  
 logger.warning("Предупреждение о проблеме")           # ЖЕЛТЫЙ
 logger.error("Ошибка в программе")                    # КРАСНЫЙ
+logger.critical("Критическая ошибка!")
 
 # если не удалось подключиться к базе данных
 try:
